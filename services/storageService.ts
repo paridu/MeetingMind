@@ -6,6 +6,7 @@ const SETTINGS_KEY = 'meeting_mind_settings';
 
 export interface AppSettings {
   teamsWebhookUrl?: string;
+  autoSync?: boolean;
 }
 
 export interface DatabaseBackup {
@@ -48,7 +49,7 @@ export const getNoteById = (id: string): MeetingRecord | undefined => {
 
 export const getSettings = (): AppSettings => {
   const data = localStorage.getItem(SETTINGS_KEY);
-  return data ? JSON.parse(data) : {};
+  return data ? JSON.parse(data) : { autoSync: false };
 };
 
 export const saveSettings = (settings: AppSettings) => {

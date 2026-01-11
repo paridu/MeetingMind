@@ -1,0 +1,7 @@
+{
+  "name": "MeetingMind Summarize",
+  "description": "Professional meeting summarizer and action plan generator using Gemini 2.5 Native Audio.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
